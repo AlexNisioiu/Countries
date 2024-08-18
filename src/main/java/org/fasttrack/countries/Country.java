@@ -3,12 +3,14 @@ package org.fasttrack.countries;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 import java.util.List;
 
 @RequiredArgsConstructor
 @Getter
 @Builder
+@ToString
 public class Country {
     private final long id;
     private final String name;
