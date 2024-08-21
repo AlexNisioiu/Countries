@@ -1,10 +1,12 @@
-package org.fasttrack.countries;
+package org.fasttrack.countries.Controller;
 
-import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
-import org.fasttrack.countries.Exception.EntityNotFoundException;
+import org.fasttrack.countries.Model.City.City;
+import org.fasttrack.countries.Model.Country.Country;
+import org.fasttrack.countries.Model.Exception.EntityNotFoundException;
+import org.fasttrack.countries.Model.Country.ExternalCountry;
+import org.fasttrack.countries.Service.country.CountryService;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestClient;
 
 import java.util.List;
 
@@ -51,6 +53,21 @@ public class CountryController {
     public ExternalCountry getCountriesFromExternal(@PathVariable long id) {
         return countryService.getExternalDataById(id);
 
+    }
+
+    @PostMapping("/{id}/neighbours/{neighbourId}")
+    Country addNeighbourToCountry(@PathVariable Long id, @PathVariable Long neighbourId) {
+        return countryService.addNeighbourToCountry(id, neighbourId);
+    }
+
+    @PostMapping("/{id}/cities")
+    City addCityToCountry(@PathVariable Long id, @RequestBody City city) {
+        return countryService.addCityToCountry(id, city);
+    }
+
+    @GetMapping("/{id}/cities")
+    List<City> getCitiesForCountry(@PathVariable Long id){
+        return countryService.getCitiesForCountry(id);
     }
 
 

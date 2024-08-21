@@ -228,7 +228,7 @@ Uruguay|Montevideo|3480222|181034|Americas|ARG~BRA
 Uzbekistan|Tashkent|31576400|447400|Asia|AFG~KAZ~KGZ~TJK~TKM
 Vanuatu|Port Vila|277500|12189|Oceania|
 Venezuela (Bolivarian Republic of)|Caracas|31028700|916445|Americas|BRA~COL~GUY
-Viet Nam|Hanoi|92700000|331212|Asia|KHM~CHN~LAO
+Vietnam|Hanoi|92700000|331212|Asia|KHM~CHN~LAO
 Wallis and Futuna|Mata-Utu|11750|142|Oceania|
 Western Sahara|El Aaiún|510713|266000|Africa|DZA~MRT~MAR
 Yemen|Sana'a|27478000|527968|Asia|OMN~SAU
